@@ -1,5 +1,5 @@
 {% set name = "contourpy" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/contourpy-{{ version }}.tar.gz
-  sha256: 37a040e73a5849124c04e193d39c2b930e9b544292dea40b9d6e3bfaa706450d
+  sha256: 11630484047cf8345d7084818de1d93c14d85e6e6c9304c2e76fb64cda39c4e7
 
 build:
   number: 0
