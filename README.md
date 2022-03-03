@@ -7,7 +7,13 @@ Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/contourpy-feedstock/blob/master/LICENSE.txt)
 
-Summary: Calculating contours of 2D quadrilateral grids from Python
+Summary: Python library for calculating contours of 2D quadrilateral grids.
+
+Documentation: https://contourpy.readthedocs.io
+
+ContourPy is a Python library for calculating contours of 2D quadrilateral
+grids.  It is written in C++11 and wrapped using pybind11.
+
 
 Current build status
 ====================
