@@ -10,17 +10,22 @@ source:
   sha256: ea94bd4f15e3526e399c36ad18155d6a550fcd6fddb45cdaaaddedfb8e7e5a97
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
+    - pybind11 >=2.6                      # [build_platform != target_platform]
+    - python                              # [build_platform != target_platform]
   host:
+    - build
     - pip
     - pybind11 >=2.6
     - python
+    - setuptools >=42
   run:
     - numpy >=1.16
     - python
