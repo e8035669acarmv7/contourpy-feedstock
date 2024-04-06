@@ -27,6 +27,7 @@ requirements:
     - meson >=1.2.0
     - meson-python >=0.13.1
     - ninja
+    - pkg-config
     - pybind11 >=2.12.0
     - python
   run:
