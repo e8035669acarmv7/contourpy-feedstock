@@ -17,11 +17,8 @@ then
     echo "python = '${PREFIX}/bin/python'" >> $BUILD_PREFIX/meson_cross_file.txt
     cat $BUILD_PREFIX/meson_cross_file.txt
 
-    # Second cross-file is a temporary fix for finding pybind11 when cross-compiling
-    # until meson 1.2.0 is released.
     $PYTHON -m pip install . -vv --no-build-isolation \
-        --config-settings=setup-args=--cross-file=$BUILD_PREFIX/meson_cross_file.txt \
-        --config-settings=setup-args=--cross-file=$PWD/meson-cross.ini
+        --config-settings=setup-args=--cross-file=$BUILD_PREFIX/meson_cross_file.txt
 else
     $PYTHON -m pip install . -vv --no-build-isolation
 fi
